@@ -18,7 +18,10 @@ class App extends Component {
 
   render() {
     return(
-      <p className="App-intro">{this.state.apiResponse}</p>
+      <div>
+        <h1>This is React</h1>
+        <p className="App-intro">{this.state.apiResponse}</p>
+      </div>
     );
   }
 }
