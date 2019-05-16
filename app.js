@@ -10,6 +10,10 @@ var usersRouter = require('./routes/users');
 var testAPIRouter = require("./routes/testAPI");
 var app = express();
 
+//Production Only
+
+app.use(express.static(path.join(__dirname, 'client/build')));
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -38,6 +42,10 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/client/build/index.html'));
 });
 
 module.exports = app;
