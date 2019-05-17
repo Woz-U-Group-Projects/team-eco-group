@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Home from './screens/Home';
 
+/* THE CLASS BELOW IS HOW YOU CAN IMPLEMENT THE API INTO YOUR PROJECT */
+/*
 class App extends Component {
   constructor(props) {
     super(props);
@@ -22,6 +24,14 @@ class App extends Component {
         <h1>This is React</h1>
         <p className="App-intro">{this.state.apiResponse}</p>
       </div>
+    );
+  }
+} */
+
+class App extends Component {
+  render() {
+    return(
+      <Home />
     );
   }
 }
