@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.css';
-import Customers from './components/customers/Customers';
 
 function App() {
   return (
     <div className="App">
-      <Customers />
+      This is a test
     </div>
   );
 }
