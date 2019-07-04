@@ -1,0 +1,12 @@
+img {
+    width: 3em;
+    height: 3em;
+}
+
+.navbar-brand {
+    margin-left: 15px;
+}
+
+.nav-container {
+    font-family: 'Playfair Display', serif;
+}
