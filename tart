@@ -1,0 +1,285 @@
+[33mcommit 8d44371a40710a37ef325d7dbda906f446c5c6ba[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: RockyWON <diz4dj@yahoo.com>
+Date:   Thu Jul 11 20:41:33 2019 -0400
+
+     edit why recycle data
+
+[33mcommit e926d39ceccbd5cca67dba776751c2fd56086a68[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: a3da3dcb 79ffd419
+Author: Lisha Rox <34436314+elishafillis@users.noreply.github.com>
+Date:   Wed Jul 10 21:11:03 2019 -0700
+
+    Merge pull request #15 from Woz-U-Group-Projects/Lisha
+    
+    dbase
+
+[33mcommit 79ffd419cf3f8e67dccc8c12aad671d68a51e797[m[33m ([m[1;31morigin/Lisha[m[33m)[m
+Author: elishafillis <elishafillis@my.scitexas.edu>
+Date:   Wed Jul 10 15:55:53 2019 -0700
+
+    dbase
+
+[33mcommit a3da3dcb880062f009fce45f78fec29cda72a97b[m
+Merge: be601389 1bd9eb93
+Author: Lisha Rox <34436314+elishafillis@users.noreply.github.com>
+Date:   Tue Jul 9 16:48:41 2019 -0700
+
+    Merge pull request #14 from Woz-U-Group-Projects/Lisha
+    
+    debris
+
+[33mcommit 1bd9eb9394d174c33be6e09fa4d94c5a3f763558[m
+Author: elishafillis <elishafillis@my.scitexas.edu>
+Date:   Tue Jul 9 16:47:52 2019 -0700
+
+    debris
+
+[33mcommit be601389d9d759685a543aadda960dd0f7689bdf[m
+Author: elishafillis <elishafillis@my.scitexas.edu>
+Date:   Tue Jul 9 16:06:50 2019 -0700
+
+    surfdebris
+
+[33mcommit e78a281ca6df985ba10d86725a7ef451490926db[m
+Merge: 9896e984 0a453fd5
+Author: Lisha Rox <34436314+elishafillis@users.noreply.github.com>
+Date:   Tue Jul 9 15:31:27 2019 -0700
+
+    Merge pull request #13 from Woz-U-Group-Projects/Lisha
+    
+    added images
+
+[33mcommit 0a453fd5c2496fa12555908e43825fca98d620aa[m
+Author: elishafillis <elishafillis@my.scitexas.edu>
+Date:   Tue Jul 9 15:25:21 2019 -0700
+
+    added images
+
+[33mcommit 9896e98453db1fd2324311b1a0d8852cda04c9af[m
+Author: Marco Chavez <unsettlesea@gmail.com>
+Date:   Fri Jul 5 19:36:01 2019 -0700
+
+    Update App.js
+
+[33mcommit b100cdc85c0c6b99d2fcf9abc17394a49c6dd931[m
+Author: Marco Chavez <unsettlesea@gmail.com>
+Date:   Fri Jul 5 19:35:23 2019 -0700
+
+    Added to homepage
+    
+    Added some information to our homepage
+
+[33mcommit 8d6ccb0bc492fd5c12856951a5c4ac3aad28949f[m
+Merge: 98b8cfb0 456b8ae0
+Author: Marco Chavez <unsettlesea@gmail.com>
+Date:   Fri Jul 5 19:00:54 2019 -0700
+
+    Added navbar
+
+[33mcommit 98b8cfb0f7041a129f41be7337d985da528bb77f[m
+Author: Marco Chavez <unsettlesea@gmail.com>
+Date:   Thu Jul 4 00:00:01 2019 -0700
+
+    Added some design to the website
+    
+    Added the navbar and some body content.
+
+[33mcommit 456b8ae04183a4d50a0c5c5e7216d3e987b08d3f[m
+Author: xenjacob <43396866+xenjacob@users.noreply.github.com>
+Date:   Tue Jul 2 21:00:01 2019 -0400
+
+    ignoring node_modules folders (#1)
+    
+    * adding .gitignore
+    
+    * removed node_modules
+    
+    * re-added node_modules folder to .gitignore
+
+[33mcommit bed30319b97ebe88be8e8648e45bbf042565c4c6[m
+Author: Marco Chavez <unsettlesea@gmail.com>
+Date:   Mon Jul 1 21:57:27 2019 -0700
+
+    Added some styling
+    
+    Added styling to client
+
+[33mcommit 929ba55754dcf91dc4af1054ee61d7ba864ece3a[m
+Author: Marco Chavez <unsettlesea@gmail.com>
+Date:   Mon Jul 1 21:38:54 2019 -0700
+
+    added client
+    
+    re-installed client.
+
+[33mcommit 9224d84cce33db9ae4817812ff177244455edd39[m
+Author: Marco Chavez <unsettlesea@gmail.com>
+Date:   Mon Jul 1 21:23:16 2019 -0700
+
+    Had to re-install client
+
+[33mcommit 60bf89de30656638ca1e633fd7579006947ee483[m
+Merge: da509b79 18d144d3
+Author: Marco Chavez <unsettlesea@gmail.com>
+Date:   Mon Jul 1 21:05:14 2019 -0700
+
+    Merge branch 'Marco'
+
+[33mcommit 18d144d3103cbb34f9223907863c1baaa467ab5d[m
+Author: Marco Chavez <unsettlesea@gmail.com>
+Date:   Mon Jul 1 21:03:37 2019 -0700
+
+    Changing the project so it actually works
+    
+    Messed up the first time. WIll work a lot better now,
+
+[33mcommit da509b7966424f94d940611d909de8e48db8bcd6[m
+Merge: 1bfb6f73 8de67047
+Author: Marco Chavez <unsettlesea@gmail.com>
+Date:   Mon Jul 1 19:35:30 2019 -0700
+
+    Merge branch 'Marco'
+
+[33mcommit 8de67047166360e67ba3aef6c14d753b6c6f87b4[m
+Author: Marco Chavez <unsettlesea@gmail.com>
+Date:   Mon Jul 1 19:35:02 2019 -0700
+
+    Restarting our setup
+    
+    Sorry guys, I messed up the project, you will have to re-fork this repo.
+
+[33mcommit bff2344aa9ca44ebfd190cccce8d92f93d72c222[m
+Author: Marco Chavez <unsettlesea@gmail.com>
+Date:   Mon Jul 1 17:25:51 2019 -0700
+
+    I am changing some directories
+    
+    I am changing some directories so we can clean up components and screens.
+
+[33mcommit 1bfb6f73819ee28c1506dbdf8287bd6c7507bb46[m
+Author: Marco Chavez <43889446+mxrcochxvez@users.noreply.github.com>
+Date:   Fri Jun 28 22:07:05 2019 -0700
+
+    Update README.md
+
+[33mcommit 36885ae8c75d0b468b6c6c4c99cedd9f5533bbce[m
+Author: Marco Chavez <43889446+mxrcochxvez@users.noreply.github.com>
+Date:   Fri Jun 28 22:06:51 2019 -0700
+
+    Create README.md
+
+[33mcommit 6e8e7a12c4c24689718ed6086fa5212a5f5598a4[m
+Author: Marco Chavez <unsettlesea@gmail.com>
+Date:   Fri Jun 28 22:05:28 2019 -0700
+
+    Testing the API
+    
+    Just setup a simple application that fetches from the API.
+
+[33mcommit f53e86b449dd98f44382b5b68567982a64321f1b[m
+Author: Marco Chavez <unsettlesea@gmail.com>
+Date:   Fri Jun 28 21:48:37 2019 -0700
+
+    Added frontend
+    
+    Added react frontend
+
+[33mcommit 0537762abb14ec23911d47348e9d9a7f2d2d5c9d[m
+Author: Marco Chavez <unsettlesea@gmail.com>
+Date:   Fri Jun 28 21:42:13 2019 -0700
+
+    Added the backend express app
+    
+    Today marks the beginning of something new... just kidding I just setup the backend for our project.
+
+[33mcommit 4df02981d0ee82d90f17f94cde5222c0811a909b[m
+Author: Marco Chavez <unsettlesea@gmail.com>
+Date:   Fri Jun 28 21:31:41 2019 -0700
+
+    Trying again!
+    
+    Messed up the first time... oops... trying again
+
+[33mcommit fd9fef79bfaf9ba281a1a4f854d8078cb95a4df4[m
+Author: Marco Chavez <43889446+mxrcochxvez@users.noreply.github.com>
+Date:   Fri Jun 28 21:23:14 2019 -0700
+
+    Update README.md
+
+[33mcommit 1f83c0f64e39de6d1d9f1858264376219f456a90[m
+Author: Marco Chavez <43889446+mxrcochxvez@users.noreply.github.com>
+Date:   Thu May 16 22:27:12 2019 -0700
+
+    Added some design with bootstrap and created components and screens directory for component management
+
+[33mcommit 57ef9986c1db694a983a2ea2278a79a73db6d23b[m
+Author: Marco Chavez <43889446+mxrcochxvez@users.noreply.github.com>
+Date:   Thu May 16 22:01:24 2019 -0700
+
+    Changed some minor title and icon information to reflect the customer
+
+[33mcommit 2ccdd60ba79658d77d9fb18bec75b9f8a43b5242[m
+Author: Marco Chavez <43889446+mxrcochxvez@users.noreply.github.com>
+Date:   Thu May 16 14:53:41 2019 -0700
+
+    Changed URI in fetch to API
+
+[33mcommit 4696a32dd8bc4e7d5d6ef8148263e0f4794a738c[m
+Author: Marco Chavez <43889446+mxrcochxvez@users.noreply.github.com>
+Date:   Thu May 16 14:44:31 2019 -0700
+
+    Changed error in package.json of Client Directory
+
+[33mcommit 9a0abc6dd97d026905f3de149734b267f58a914b[m
+Author: Marco Chavez <43889446+mxrcochxvez@users.noreply.github.com>
+Date:   Thu May 16 14:38:36 2019 -0700
+
+    added postbuild scripts to client
+
+[33mcommit bb017ef2356c3735a26367cb9cfe694e045fb37a[m
+Author: Marco Chavez <43889446+mxrcochxvez@users.noreply.github.com>
+Date:   Thu May 16 14:34:08 2019 -0700
+
+    Added lines to app.js so Express renders React
+
+[33mcommit 674aff4e13428b2af0ba24ae2c67bb1241927f3a[m
+Author: Marco Chavez <43889446+mxrcochxvez@users.noreply.github.com>
+Date:   Thu May 16 14:04:08 2019 -0700
+
+    Testing React
+
+[33mcommit 28d636b294b2ced8a49c3252a95241caa2737200[m
+Author: Marco Chavez <43889446+mxrcochxvez@users.noreply.github.com>
+Date:   Thu May 16 13:58:34 2019 -0700
+
+    Changed filetree for deployment to Heroku
+
+[33mcommit b1392bbcd01f79d72958b420323359de17391c3b[m
+Author: Marco Chavez <43889446+mxrcochxvez@users.noreply.github.com>
+Date:   Thu May 16 10:22:15 2019 -0700
+
+    Adding some packages to node in order for the client to connect to API
+
+[33mcommit 784e06528bf3334c2dfcd710729712d6c888bb13[m
+Author: Marco Chavez <43889446+mxrcochxvez@users.noreply.github.com>
+Date:   Thu May 16 10:07:36 2019 -0700
+
+    Add express to project
+
+[33mcommit 1122bd8f443f5d54c15f34439d457e1ecc91f4f7[m
+Author: Marco Chavez <43889446+mxrcochxvez@users.noreply.github.com>
+Date:   Thu May 16 10:01:30 2019 -0700
+
+    Added React to project
+
+[33mcommit 91cdfe5e666fd486887a8d6f2db422134144f5a4[m
+Author: Marco Chavez <43889446+mxrcochxvez@users.noreply.github.com>
+Date:   Thu May 16 09:48:42 2019 -0700
+
+    Update README.md
+
+[33mcommit efbcbea43bc9dcb67a44a1236baacbdf5a7e96e9[m
+Author: Marco Chavez <43889446+mxrcochxvez@users.noreply.github.com>
+Date:   Thu May 16 09:48:08 2019 -0700
+
+    Initial commit
