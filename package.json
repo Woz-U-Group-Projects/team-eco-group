@@ -1,8 +1,7 @@
 {
-  "name": "clone",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "name": "team-eco-group",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
@@ -10,12 +9,14 @@
     "client": "cd client && npm start",
     "dev": " concurrently \"npm run server\" \"npm run client\""
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "concurrently": "^4.1.1",
-    "express": "^4.17.1"
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "hbs": "~4.0.4",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "mysql": "^2.17.1"
   },
   "devDependencies": {
     "nodemon": "^1.19.1"
