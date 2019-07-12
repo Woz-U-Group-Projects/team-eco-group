@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Body.css';
+import Axios1 from './components/Axios1';
 
 class Body extends Component {
     render() {
