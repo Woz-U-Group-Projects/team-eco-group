@@ -29,7 +29,7 @@ class Navbar extends Component {
                                 <button className="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
                             </form>
                             <div className="App">
-                            <img src={logo} className="App-logo" alt="logo" />
+                            <img src={Logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Reasons To Recycle</h1>
           
         <h2>Reasons why I recycle and <b>You</b> should too!</h2>
