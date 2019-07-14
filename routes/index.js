@@ -17,18 +17,18 @@ connection.connect(function(err) {
   console.log('Yay! You are connected to the database!');
 })
 
-router.get("/", function(req, res, next) {
-  models.Fruit.findAll().then(fruits => res.json(fruits));
-});
+// router.get("/", function(req, res, next) {
+//   models.Fruit.findAll().then(fruits => res.json(fruits));
+// });
 
-router.post("/", function(req, res, next) {
-  console.log(req.body);
-  let newFruit = new models.Fruit();
-  newFruit.name = req.body.name;
-  newFruit.save().then(fruit => res.json(fruit));
-});
+// router.post("/", function(req, res, next) {
+//   console.log(req.body);
+//   let newFruit = new models.Fruit();
+//   newFruit.name = req.body.name;
+//   newFruit.save().then(fruit => res.json(fruit));
+// });
 
-module.exports = router;
+// module.exports = router;
 
 //  should return all rows in the database that match the query string, which in this case is SELECT * from actor LIMIT 10
 // const query = `SELECT * from actor LIMIT 10`;
