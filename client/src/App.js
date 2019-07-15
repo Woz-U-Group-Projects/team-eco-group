@@ -7,8 +7,8 @@ import Axios1 from './components/Axios1';
 function App() {
   return (
     <div className="App">
-      <Navbar />,
-      <Axios1 />
+      <Navbar />
+      <Body />
     </div>
   );
 }
