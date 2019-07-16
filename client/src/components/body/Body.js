@@ -1,12 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './Body.css';
-import Axios1 from './components/Axios1';
+import Donate from '../../screens/Donate';
+import Links from '../../screens/Links';
+import Reasons from '../../screens/Reasons';
+import Home from '../../screens/Home';
 
-class Body extends Component {
+class Body extends React.Component {
     render() {
-        return(
+        return (
             <div className="body">
-                <p className="image-desc">This is your oceans</p>
+                <Router>
+                    <Switch>
+                        <Route exact path="/" component={Home} />
+                        <Route path="/links" component={Links} />
+                        <Route path="/reasons" component={Reasons} />
+                        <Route path="/donate" component={Donate} />
+                    </Switch>
+                </Router>
             </div>
         );
     }
