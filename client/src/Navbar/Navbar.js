@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link , Switch} from 'react-router-dom';
 import './Navbar.css';
-import Logo from '../../images/logo.svg';
+import Logo from '../images/logo.svg';
+import Donate from '../screens/Donate';
+import Links from '../screens/Links';
+import Reasons from '../screens/Reasons';
+import Home from '../screens/Home';
+
 
 class Navbar extends Component {
     render() {
@@ -34,8 +39,17 @@ class Navbar extends Component {
                             <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
                             <button className="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
                         </form>
+                        
                         </div>
+
+                        
+                        
+                
                     </nav>
+                    <Route exact path="/" component={Home} />
+                        <Route path="/links" component={Links} />
+                        <Route path="/reasons" component={Reasons} />
+                        <Route path="/donate" component={Donate} />
                 </Router>
             </div >
         );
