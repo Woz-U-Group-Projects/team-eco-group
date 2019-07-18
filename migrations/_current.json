@@ -1,0 +1,45 @@
+{
+    "tables": {
+        "donor": {
+            "tableName": "donor",
+            "schema": {
+                "id": {
+                    "allowNull": false,
+                    "primaryKey": true,
+                    "field": "id",
+                    "seqType": "Sequelize.INTEGER(11)"
+                },
+                "email": {
+                    "allowNull": true,
+                    "field": "email",
+                    "seqType": "Sequelize.STRING(45)"
+                },
+                "admin": {
+                    "allowNull": true,
+                    "defaultValue": {
+                        "value": "0"
+                    },
+                    "field": "admin",
+                    "seqType": "Sequelize.BOOLEAN"
+                },
+                "donation_amount": {
+                    "allowNull": true,
+                    "field": "donation_amount",
+                    "seqType": "Sequelize.DECIMAL(10, 2)"
+                },
+                "firstname": {
+                    "allowNull": true,
+                    "field": "firstname",
+                    "seqType": "Sequelize.STRING(45)"
+                },
+                "lastname": {
+                    "allowNull": true,
+                    "field": "lastname",
+                    "seqType": "Sequelize.STRING(45)"
+                }
+            },
+            "indexes": []
+        }
+    },
+    "revision": 4
+}

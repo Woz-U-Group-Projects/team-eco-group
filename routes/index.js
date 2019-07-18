@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 const mysql = require('mysql');
+const mysql2 = require('mysql2');
+const models = require('../models');
 
 var connection = mysql.createConnection({
   host: 'localhost',
@@ -19,7 +21,7 @@ connection.connect(function (err) {
 
 //v1 example - basic API connectivity
 //returns static JSON
-router.get('/api/v1', (req, res) => {
+router.get('/api/v1', (req, res, next) => {
 
   //Here is where we could include the logic for the API like receiving and authenticating login info.
   const customers = [
@@ -33,7 +35,7 @@ router.get('/api/v1', (req, res) => {
 });
 
 // API v2 - first SQL database connection
-router.get('/api/v2', (req, res) => {
+router.get('/api/v2', (req, res, next) => {
 
   //Here is where we could include the logic for the API like receiving and authenticating login info.
   const query = `SELECT * from donor LIMIT 10`;
@@ -44,6 +46,15 @@ router.get('/api/v2', (req, res) => {
   });
 
 });
+
+// API v3 with Sequelize
+router.get('/api/v3', (req, res, next) => {
+  models.donor.findAll({}).then(donorsList => 
+    res.json(donorsList)
+  );
+
+});
+
 // router.get("/", function(req, res, next) {
 //   models.Fruit.findAll().then(fruits => res.json(fruits));
 // });
