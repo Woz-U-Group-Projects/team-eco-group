@@ -49,10 +49,22 @@ router.get('/api/v2', (req, res, next) => {
 
 // API v3 with Sequelize
 router.get('/api/v3', (req, res, next) => {
-  models.donor.findAll({}).then(donorsList => 
+  models.donor.findAll({}).then(donorsList =>
     res.json(donorsList)
   );
 
+});
+
+// API v3 Square POST
+router.post('/api/v3/transact', (req, res, next) =>
+  res.send('Ready to charge $ to Square...'));
+
+// for preflight check used by post
+router.options("/*", function (req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
+  res.send(200);
 });
 
 // router.get("/", function(req, res, next) {
