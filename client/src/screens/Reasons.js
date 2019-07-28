@@ -25,7 +25,6 @@ const Reasons = () => (
         <hr />
     <p className="bottom"></p>
 
-        
     <h1>Dangers of Not Recycling Things:</h1>
  
     <li><a href="https://sciencing.com/effects-not-recycling-4827369.html">Scientific dangers to society when you don't recycle.</a></li>
@@ -46,7 +45,8 @@ const Reasons = () => (
     <li><a href="https://www.sciencedirect.com/science/article/pii/S1352231011000070">lower crop yeilds.</a></li>
     <li><a href="https://www.coolearth.org/2018/10/ipcc-report-2/?gclid=Cj0KCQjw1MXpBRDjARIsAHtdN-0U7QqSlN_UEYEVejAKZ_RLxxoPyIRM6Ij5v6fFkOgcwCY21d9ANVgaAjRBEALw_wcB">Global Warming</a></li>
 
-    </div>
+
+</div>
 );
 
-export default Reasons
+export default Reasons;
