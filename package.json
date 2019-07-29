@@ -18,11 +18,8 @@
     "morgan": "~1.9.1",
     "mysql": "^2.17.1",
     "mysql2": "^1.6.5",
-<<<<<<< HEAD
     "node-cmd": "^3.0.0",
     "node-ssh": "^6.0.0",
-=======
->>>>>>> a42f696d3c6badf5808b5ca5ea7e38c03dec90f0
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router": "^5.0.1",
