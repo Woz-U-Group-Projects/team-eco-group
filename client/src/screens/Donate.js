@@ -24,4 +24,4 @@ export default class Donate extends React.Component {
             </div>
         )
     }
-}
+} 
