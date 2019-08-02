@@ -1,9 +1,10 @@
-var cmd = require('node-cmd');
-var path, node_ssh, ssh, fs;
-fs = require('fs');
-path = require('path');
-node_ssh = require('node-ssh');
-ssh = new node_ssh();
+// this file has not yet been completely updated from the hackathon-starter-temp template deploy script.
+
+var cmd = require('node-cmd'),
+    fs = require('fs'),
+    path = require('path'),
+    node_ssh = require('node-ssh'),
+    ssh = new node_ssh();
 
 // the method that starts the deployment process
 function main() {
@@ -15,7 +16,7 @@ function main() {
 function installPM2() {
   return ssh.execCommand(
     'sudo npm install pm2 -g', {
-      cwd: '/home/ubuntu'
+      cwd: '/'
   });
 }
 
@@ -49,31 +50,31 @@ function transferProjectToRemote(failed, successful) {
 // creates a temporary folder on the remote server
 function createRemoteTempFolder() {
   return ssh.execCommand(
-    'rm -rf hackathon-starter-temp && mkdir hackathon-starter-temp', {
-      cwd: '/home/ubuntu'
+    'rm -rf team-eco-group-temp && mkdir team-eco-group-temp', {
+      cwd: '/'
   });
 }
 
-// stops mongodb and node services on the remote server
+// stops node services on the remote server
 function stopRemoteServices() {
   return ssh.execCommand(
-    'pm2 stop all && sudo service mongod stop', {
-      cwd: '/home/ubuntu'
+    'pm2 stop all', {
+      cwd: '/'
   });
 }
 
 // updates the project source on the server
 function updateRemoteApp() {
   return ssh.execCommand(
-    'cp -r hackathon-starter-temp/* hackathon-starter/ && rm -rf hackathon-starter-temp', {
-      cwd: '/home/ubuntu'
+    'cp -r team-eco-group-temp/* team-eco-group/ && rm -rf team-eco-group-temp', {
+      cwd: '/'
   });
 }
 
 // restart mongodb and node services on the remote server
 function restartRemoteServices() {
   return ssh.execCommand(
-    'cd hackathon-starter && sudo service mongod start && pm2 start app.js', {
+    'cd hackathon-starter && pm2 start app.js', {
       cwd: '/home/ubuntu'
   });
 }
