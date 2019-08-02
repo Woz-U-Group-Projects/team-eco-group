@@ -26,7 +26,10 @@
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "^3.0.1",
-    "sequelize": "^4.43.0"
+    "sequelize": "^4.43.0",
+    "react-square-payment-form": "^0.1.8",
+    "square-connect": "^2.20190724.0",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
     "concurrently": "^4.1.1",
