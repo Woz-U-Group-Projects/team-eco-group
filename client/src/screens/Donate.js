@@ -33,7 +33,7 @@ export default class Donate extends React.Component {
     }
 
     componentDidMount() {
-        axios.get(`http://localhost:5000/api/v1/`).then(res => {
+        axios.get(`http://localhost:5000/api/v3/donors`).then(res => {
             console.log(res);
             this.setState({ customers: res.data });
         });
@@ -43,7 +43,10 @@ export default class Donate extends React.Component {
             <div className="donate-app">
                 <p>Thanks to these fine folks for donating:</p>
                 <ul>
-                    {this.state.customers.map(person => <li>{person.firstName} {person.lastName}</li>)}
+                    {this.state.customers.map(person =>
+                    <li>{person.firstname} {person.lastname}, $
+                    {person.donation_amount}{person.cause ? ('for ' + person.cause) : ''}
+                    </li>)}
                 </ul>
                 <SquarePaymentForm
                     applicationId={'sandbox-sq0idp-Jbaskmn0qSl8wgWxBSnrNQ'}

@@ -51,7 +51,7 @@ router.get('/api/v2', (req, res, next) => {
 });
 
 // API v3 get all donors (with Sequelize)
-router.get('/api/v3', (req, res, next) => {
+router.get('/api/v3/donors', (req, res, next) => {
   models.donor.findAll({}).then(donorsList =>
     res.json(donorsList)
   );

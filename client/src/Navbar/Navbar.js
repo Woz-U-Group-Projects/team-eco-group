@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link , Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './Navbar.css';
 import Logo from '../images/logo.svg';
 import Donate from '../screens/Donate';
