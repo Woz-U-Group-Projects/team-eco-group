@@ -31,18 +31,10 @@ connection.connect(function (err) {
 })
 
 //v1 example - basic API connectivity
-//returns static JSON
-router.get('/api/v1', (req, res, next) => {
+//no functionality, just returns a test string.
+router.get('/api/v1/test', (req, res, next) => {
 
-  //Here is where we could include the logic for the API like receiving and authenticating login info.
-  const customers = [
-    { id: 0, firstName: 'Express API has been connected to frontend!' },
-    { id: 1, firstName: 'John', lastName: 'Doe' },
-    { id: 2, firstName: 'Steve', lastName: 'Smith' },
-    { id: 3, firstName: 'Mary', lastName: 'Joe' }
-  ];
-
-  res.json(customers); //this responds with our customer object in JSON
+  res.send('Express API is ready'); //this responds with our customer object in JSON
 });
 
 // API v2 - first SQL database connection
