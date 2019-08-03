@@ -1,5 +1,26 @@
+.linksImage {
+    background-image: url('../images/surfDebris1.jpg');
+}
+
+.grid {
+    width: auto;
+}
+.module {
+    padding:  20px;
+ 
+ }
+
+ .col-1-3 {
+    width: 50%;
+ }
+ .col-2-3 {
+    width: 50%;
+ }
+
+ 
 .row {
-    margin-right: 300px;
+    margin: auto;
+
 }
 
 .row2 {
@@ -26,13 +47,14 @@ color: yellow;
 
 #topic-link {
 color: black;
+margin: auto;
 }
 
 #topic-link:visited {
-color: blue;
+color: yellow;
 }
 
 #topic-link:hover {
-color: crimson;
+color: turquoise;
 font-size: 22px;
 }
