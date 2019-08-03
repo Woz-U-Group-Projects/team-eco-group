@@ -13,7 +13,7 @@ export default class Donate extends React.Component {
     constructor() {
         super();
         this.state = {
-            customers: [],
+            donations: [],
             errorMessages: []
         }
     }
@@ -26,16 +26,18 @@ export default class Donate extends React.Component {
 
         this.setState({ errorMessages: [] })
         console.log("Square: nonce created: " + nonce);
-        axios.post('http://localhost:5000/api/v3/transact',
-        { nonce: nonce }).then(res =>
-        console.log("nonce POST response: ", res)
-        ).catch(error => console.log(error));
+
+        return axios.post('http://localhost:5000/api/v3/donors/new',
+        { nonce: nonce, amount: 1 }, new Promise( 
+        res => this.setState( { donations: [...this.state.donations, //res.body
+        { id: 44, firstname: "Johnnie", lastname: "Reinhart",
+            donation_amount: 44, cause: "free energy research" }]})));
     }
 
     componentDidMount() {
-        axios.get(`http://localhost:5000/api/v3/donors`).then(res => {
+        axios.get(`http://localhost:5000/api/v3/donations`).then(res => {
             console.log(res);
-            this.setState({ customers: res.data });
+            this.setState({ donations: res.data });
         });
     }
     render() {
@@ -44,8 +46,8 @@ export default class Donate extends React.Component {
                 <p>Thanks to these fine folks for donating:</p>
                 <ul>
                     {this.state.customers.map(person =>
-                    <li>{person.firstname} {person.lastname}, $
-                    {person.donation_amount}{person.cause ? ('for ' + person.cause) : ''}
+                    <li key={person.id}>{person.firstname} {person.lastname}, $
+                    {person.donation_amount}{person.cause ? (' for ' + person.cause) : ''}
                     </li>)}
                 </ul>
                 <SquarePaymentForm
@@ -69,7 +71,7 @@ export default class Donate extends React.Component {
                     </fieldset>
 
                     <CreditCardSubmitButton>
-                        Pay $1.00
+                        Donate
                     </CreditCardSubmitButton>
                 </SquarePaymentForm>
 

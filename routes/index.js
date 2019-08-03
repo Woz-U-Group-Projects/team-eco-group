@@ -96,6 +96,7 @@ router.post('/api/v3/donations/new', (req, res, next) => {
         donation_amount: req.body.donation_amount,
         cause: req.body.cause
       }});
+      res.send(200);
     //res.json(json);
   //});
 });
