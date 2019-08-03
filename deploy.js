@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+// var cmd = require('node-cmd');
+// var path, node_ssh, ssh, fs;
+// fs = require('fs');
+// path = require('path');
+// node_ssh = require('node-ssh');
+// ssh = new node_ssh();
+=======
 // this file has not yet been completely updated from the hackathon-starter-temp template deploy script.
 
 var cmd = require('node-cmd'),
@@ -5,6 +13,7 @@ var cmd = require('node-cmd'),
     path = require('path'),
     node_ssh = require('node-ssh'),
     ssh = new node_ssh();
+>>>>>>> 9293a5b135cb45a3030571513fc17978b97a67e8
 
 // // the method that starts the deployment process
 // function main() {
@@ -12,6 +21,15 @@ var cmd = require('node-cmd'),
 //   sshConnect();
 // }
 
+<<<<<<< HEAD
+// // installs PM2
+// function installPM2() {
+//   return ssh.execCommand(
+//     'sudo npm install pm2 -g', {
+//       cwd: '/home/ubuntu'
+//   });
+// }
+=======
 // installs PM2
 function installPM2() {
   return ssh.execCommand(
@@ -19,6 +37,7 @@ function installPM2() {
       cwd: '/'
   });
 }
+>>>>>>> 9293a5b135cb45a3030571513fc17978b97a67e8
 
 // // transfers local project to the remote server
 // function transferProjectToRemote(failed, successful) {
@@ -47,6 +66,39 @@ function installPM2() {
 //   );
 // }
 
+<<<<<<< HEAD
+// // creates a temporary folder on the remote server
+// function createRemoteTempFolder() {
+//   return ssh.execCommand(
+//     'rm -rf hackathon-starter-temp && mkdir hackathon-starter-temp', {
+//       cwd: '/home/ubuntu'
+//   });
+// }
+
+// // stops mongodb and node services on the remote server
+// function stopRemoteServices() {
+//   return ssh.execCommand(
+//     'pm2 stop all && sudo service mongod stop', {
+//       cwd: '/home/ubuntu'
+//   });
+// }
+
+// // updates the project source on the server
+// function updateRemoteApp() {
+//   return ssh.execCommand(
+//     'cp -r hackathon-starter-temp/* hackathon-starter/ && rm -rf hackathon-starter-temp', {
+//       cwd: '/home/ubuntu'
+//   });
+// }
+
+// // restart mongodb and node services on the remote server
+// function restartRemoteServices() {
+//   return ssh.execCommand(
+//     'cd hackathon-starter && sudo service mongod start && pm2 start app.js', {
+//       cwd: '/home/ubuntu'
+//   });
+// }
+=======
 // creates a temporary folder on the remote server
 function createRemoteTempFolder() {
   return ssh.execCommand(
@@ -78,6 +130,7 @@ function restartRemoteServices() {
       cwd: '/home/ubuntu'
   });
 }
+>>>>>>> 9293a5b135cb45a3030571513fc17978b97a67e8
 
 // // connect to the remote server
 // function sshConnect() {
