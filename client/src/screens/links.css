@@ -1,0 +1,60 @@
+.linksImage {
+    background-image: url('../images/surfDebris1.jpg');
+}
+
+.grid {
+    width: auto;
+}
+.module {
+    padding:  20px;
+ 
+ }
+
+ .col-1-3 {
+    width: 50%;
+ }
+ .col-2-3 {
+    width: 50%;
+ }
+
+ 
+.row {
+    margin: auto;
+
+}
+
+.row2 {
+    margin-right: 200px;
+}
+
+h1 {
+    color: red;
+    font-weight: bolder;
+}
+
+h3 {
+    color: red;
+    font-weight: bold;
+}
+
+div {
+    font-weight: bolder;
+}
+
+/* div:hover {
+color: yellow;
+} */
+
+#topic-link {
+color: black;
+margin: auto;
+}
+
+#topic-link:visited {
+color: yellow;
+}
+
+#topic-link:hover {
+color: turquoise;
+font-size: 22px;
+}
