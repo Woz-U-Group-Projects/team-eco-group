@@ -1,7 +1,5 @@
 import React from 'react';
 import './links.css';
-// import Logo5 from '../images/sufDebris1.jpg';
-    {/* <img style={{width: 800, height: 400}}src={Logo5}/>   */}
 
 const Links = () => (
         
