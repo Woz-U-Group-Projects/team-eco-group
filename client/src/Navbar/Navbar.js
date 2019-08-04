@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link , Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './Navbar.css';
 import Logo from '../images/logo.svg';
 import Donate from '../screens/Donate';
@@ -46,7 +46,7 @@ class Navbar extends Component {
                         
                 
                     </nav>
-                    <Route exact path="/" component={Home} />
+                    <Route path="/" component={Home} />
                         <Route path="/links" component={Links} />
                         <Route path="/reasons" component={Reasons} />
                         <Route path="/donate" component={Donate} />
