@@ -24,7 +24,8 @@ const Reasons = () => (
         <p>Recycling programs cost less than waste disposal programs </p>
         <hr />
     <p className="bottom"></p>
-    </div>
+
+</div>
 );
 
-export default Reasons
+export default Reasons;
