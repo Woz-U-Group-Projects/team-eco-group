@@ -1,7 +1,30 @@
 .picture1{
-    margin-right: 300px;
-}
-
-.row2 {
-    margin-right: 80px;
-}
+    text-align: center;
+ }
+ 
+ 
+ 
+ .row2 {
+     text-align: center;
+    color: navy;
+ }
+ 
+ .row3 {
+     text-align: center;
+    
+ }
+ 
+ a {
+     color: navy;
+ }
+ .home {
+     background-image: url('../images/surfDebris1.jpg');
+     color: white;
+     height: 1300px;
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+ 
+ .p {
+     color: white;
+ }

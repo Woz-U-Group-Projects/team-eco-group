@@ -3,7 +3,7 @@ import './links.css';
 
 const Links = () => (
         
-    <div className="linksImage" >
+    <div className="oil" >
     <div class="grid">
         <div class="col-2-3">
             <article class="module">                

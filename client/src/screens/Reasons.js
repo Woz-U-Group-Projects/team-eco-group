@@ -7,7 +7,7 @@ const Reasons = () => (
         <h1 className="App-title">Reasons To Recycle</h1>
 
         <h2>Reasons why I recycle and <b>You</b> should too!</h2>
-        <img style={{width:1100,height:300}}src={Logo1}/>
+    
         <h6>
             We will eventually run out of raw materials, <br />
             so recycling keeps us from running out sooner.<br />
@@ -23,6 +23,7 @@ const Reasons = () => (
         <hr />
         <p>Recycling programs cost less than waste disposal programs </p>
         <hr />
+        <br />
     <p className="bottom"></p>
 
 </div>
