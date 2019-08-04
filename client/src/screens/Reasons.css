@@ -1,5 +1,10 @@
-.bottom {
-        background-image: url('../images/FishingGear.jpg');
-    background-size: cover;
-    height: 200px;
-    }
+.Reasons {
+    background-image: url('../images/body-background.jpg');
+background-size: cover;
+height: 1300px;
+color: white;
+}
+
+li a {
+    color: white;
+}

@@ -1,6 +1,6 @@
-.linksImage {
+/* .linksImage {
     background-image: url('../images/surfDebris1.jpg');
-}
+} */
 
 .grid {
     width: auto;
@@ -57,4 +57,11 @@ color: yellow;
 #topic-link:hover {
 color: turquoise;
 font-size: 22px;
+}
+
+.oil {
+    background-image: url('../images/oilyPlican.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1300px;
 }
