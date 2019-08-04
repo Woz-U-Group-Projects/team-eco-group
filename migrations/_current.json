@@ -6,8 +6,9 @@
                 "id": {
                     "allowNull": false,
                     "primaryKey": true,
+                    "autoIncrement": true,
                     "field": "id",
-                    "seqType": "Sequelize.INTEGER(11)"
+                    "seqType": "Sequelize.INTEGER"
                 },
                 "email": {
                     "allowNull": true,
@@ -33,13 +34,18 @@
                     "seqType": "Sequelize.STRING(45)"
                 },
                 "lastname": {
-                    "allowNull": true,
+                    "allowNull": false,
                     "field": "lastname",
                     "seqType": "Sequelize.STRING(45)"
+                },
+                "cause": {
+                    "allowNull": true,
+                    "field": "cause",
+                    "seqType": "Sequelize.STRING(100)"
                 }
             },
             "indexes": []
         }
     },
-    "revision": 4
+    "revision": 7
 }
