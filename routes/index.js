@@ -75,19 +75,13 @@ router.post('/api/v3/donations/new', (req, res, next) => {
 
   var req_body = {
     idempotency_key: uuid(),
-    amount_money: { amount: 1.00, currency: "USD" },
+    amount_money: { amount: req.body.donation_amount, currency: "USD" },
     card_nonce: req.body.nonce,
   };
 
   return apiInstance.charge(locationId, req_body)
-  .then(data => {
-    var transaction = JSON.stringify(data);
-    // add new donor to list of donors
-    var new_donor = { firstname: "John",
-                      lastname: "Express",
-                      donation_amount: 33,
-                      cause: "wood"
-                      };*/
+  .then(data => {*/
+    console.log(req.body);
     models.donation.findOrCreate(
       {  where: { id: 0 },
       defaults: {
