@@ -1,10 +1,14 @@
 import React from 'react';
 import axios from 'axios';
 
-export default class Foo extends React.Component {
+export default class Form extends React.Component {
     constructor(props) {
       super(props);
       this.handleClick = this.handleClick.bind(this);
+    }
+
+    fields() {
+      return 
     }
     handleClick() {
       alert('Thank You for Donating');

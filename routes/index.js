@@ -65,9 +65,9 @@ router.get('/api/v2', (req, res, next) => {
 });
 
 // API v3 get all donors (with Sequelize)
-router.get('/api/v3/donors', (req, res, next) => {
-  models.donor.findAll({}).then(donorsList =>
-    res.json(donorsList)
+router.get('/api/v3/donations', (req, res, next) => {
+  models.donation.findAll({}).then(donationsList =>
+    res.json(donationsList)
   );
 
 });
@@ -80,30 +80,33 @@ router.get('/api/v3/donors', (req, res, next) => {
    POST /api/v3/videolinks/:id/downvote - downvote link
    */
 
-// API v3 Square POST
-router.post('/api/v3/transact', (req, res, next) => {
-  var apiInstance = new SquareConnect.TransactionsApi();
+
+// API v3
+// make new donation (charge thru Square Connect API)
+router.post('/api/v3/donations/new', (req, res, next) => {
+  /*var apiInstance = new SquareConnect.TransactionsApi();
   var locationId = "CBASECNAvp9EvcDkIVIyQdNH-VsgAQ";
 
   var req_body = {
     idempotency_key: uuid(),
-    amount_money: { amount: 1.00, currency: "USD" },
+    amount_money: { amount: req.body.donation_amount, currency: "USD" },
     card_nonce: req.body.nonce,
   };
 
-  apiInstance.charge(locationId, req_body).then(function (data) {
-    var json = JSON.stringify(data);
-    console.log(json);
-    res.render('process-payment', {
-      'title': 'Payment Successful',
-      'result': json
-    });
-  }, function (error) {
-    res.render('process-payment', {
-      'title': 'Payment Failure',
-      'result': error.response.text
-    });
-  });
+  return apiInstance.charge(locationId, req_body)
+  .then(data => {*/
+    console.log(req.body);
+    models.donation.findOrCreate(
+      {  where: { id: 0 },
+      defaults: {
+        firstname: req.body.firstname,
+        lastname: req.body.lastname,
+        donation_amount: req.body.donation_amount,
+        cause: req.body.cause
+      }});
+      res.send(200);
+    //res.json(json);
+  //});
 });
 
   // for preflight check used by post

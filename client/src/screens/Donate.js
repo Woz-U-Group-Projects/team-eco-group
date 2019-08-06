@@ -1,25 +1,30 @@
-
 import React from 'react';
 import axios from 'axios';
-import Form from './form';
+//import Form from './form';
 import './donate.css';
-import SquarePaymentForm, {
+/*import SquarePaymentForm, {
     CreditCardNumberInput,
     CreditCardExpirationDateInput,
     CreditCardPostalCodeInput,
     CreditCardCVVInput,
     CreditCardSubmitButton
 } from 'react-square-payment-form';
-import 'react-square-payment-form/lib/default.css';
+import 'react-square-payment-form/lib/default.css';*/
+
 
 export default class Donate extends React.Component {
     constructor() {
         super();
 
         this.state = {
-            customers: [],
+            donations: [],
+            errorMessages: [],
 
-            errorMessages: []
+            firstname: "",
+            lastname: "",
+            cause: "",
+            amount: ""
+
         }
     }
 
@@ -31,78 +36,121 @@ export default class Donate extends React.Component {
 
         this.setState({ errorMessages: [] })
         console.log("Square: nonce created: " + nonce);
-        axios.post('http://localhost:5000/api/v3/transact',
-            { nonce: nonce }).then(res =>
-                console.log("nonce POST response: ", res)
-            ).catch(error => console.log(error));
+
+        return axios.post('http://localhost:5000/api/v3/donations/new',
+            {
+                nonce: nonce,
+                donation_amount: 1.09,
+                cause: "free energy research",
+                firstname: "Jhnn",
+                lastname: "Reinburger"
+            })
+            .then(res => console.log(res));
     }
 
+
     componentDidMount() {
-        axios.get(`http://localhost:5000/api/v3/donors`).then(res => {
+        axios.get(`http://localhost:5000/api/v3/donations`).then(res => {
             console.log(res);
-            this.setState({ customers: res.data });
+            this.setState({ donations: res.data });
         });
     }
 
-
     render() {
         return (
+
             <div className="donate-app" >
-                <h2 style={{ "text-align": "center" }}>Donate Today!</h2>
-                <form className="form" style={{ "text-align": "center" }}>
-                    <label htmlFor="namedInput">Name:</label>
-                    <input id="namedInput" type="text" name="name" /><br />
-                    <label htmlFor="emailedInput">Email:</label>
-                    <input id="emailedInput" type="text" name="email" /><br />
-                    <label htmlFor="amountedInput">Amount:</label>
-                    <input id="amountedInput" type="text" name="amount" /><br />
+                <p>Thanks to these fine folks for donating:</p>
+                <ul>
+                    {this.state.donations.map(person =>
+                        <li key={person.id}>{person.firstname} {person.lastname}, $
+                    {person.donation_amount}{person.cause ? (' for ' + person.cause) : ''}
+                        </li>)}
+                </ul>
+                <h2>Donate Today!</h2>
+                <form className="form">
+                    <label htmlFor="firstnameInput">First Name:</label>
+                    <input id="firstnameInput" type="text" name="firstname" value={this.state.firstname}
+                        onChange={(e) => this.setState({ firstname: e.target.value })} /><br />
+                    <label htmlFor="lastnameInput">Last Name:</label>
+                    <input id="lastnameInput" type="text" name="lastname" value={this.state.lastname}
+                        onChange={(e) => this.setState({ lastname: e.target.value })} /><br />
+                    <label htmlFor="amountedInput">Amount ($):</label>
+                    <input id="amountedInput" type="text" name="amount"
+                        onChange={(e) => this.setState({ amount: e.target.value })} /><br />
                     <label htmlFor="causedInput">Cause:</label>
-                    <input id="causedInput" type="text" name="cause" /><br />
-                    <Form />
+                    <input id="causedInput" type="text" name="cause"
+                        onChange={(e) => this.setState({ cause: e.target.value })} /><br />
+                    <button onClick={e => {
+                        e.preventDefault();
+                        console.log(this.state);
+                        axios.post('http://localhost:5000/api/v3/donations/new',
+                            {
+                                //nonce: nonce,
+                                "firstname": this.state.firstname,
+                                "cause": this.state.cause,
+                                "donation_amount": parseFloat(this.state.amount),
+                                "lastname": this.state.lastname
+                            },
+                            //lastname: this.state.fields.lastname
+                        )
+                            .then(res => {
+                                alert('Thank you for your donation, ' + this.state.firstname + '!');
+                                this.setState({
+                                    donations: [...this.state.donations,
+                                    {
+                                        firstname: this.state.firstname,
+                                        lastname: this.state.lastname,
+                                        cause: this.state.cause,
+                                        donation_amount: parseFloat(this.state.amount)
+                                    }],
+                                    firstname: "",
+                                    lastname: "",
+                                    cause: "",
+                                    amount: ""
+                                })
+                            })
+                            .catch(err => console.log(err));
+                    }}
+                    >Donate</button>
                 </form>
+                {/*<SquarePaymentForm
+                    applicationId={'sandbox-sq0idp-Jbaskmn0qSl8wgWxBSnrNQ'}
+                    locationId={'MB4DTCNJ9ABTM'}
+                    cardNonceResponseReceived={this.cardNonceResponseReceived}>
+                    <fieldset className="sq-fieldset">
+                        <label htmlFor="amountedInput">Amount:</label>
+                        <input id="amountedInput" type="text" name="amount" />
+                        <p>Donate funds thru Square:</p>
+                        <CreditCardNumberInput />
+                        <div>
+                            <CreditCardExpirationDateInput />
+                        </div>
 
-                <div className="donate-app">
-                    <p>Thanks to these fine folks for donating:</p>
-                    <ul>
-                        {this.state.customers.map(person =>
-                            <li>{person.firstname} {person.lastname}, $
-                    {person.donation_amount}{person.cause ? ('for ' + person.cause) : ''}
-                            </li>)}
-                    </ul>
-                    <SquarePaymentForm
-                        applicationId={'sandbox-sq0idp-Jbaskmn0qSl8wgWxBSnrNQ'}
-                        locationId={'MB4DTCNJ9ABTM'}
-                        cardNonceResponseReceived={this.cardNonceResponseReceived}
-                    ><p>Donate funds thru Square:</p>
-                        <fieldset className="sq-fieldset">
-                            <CreditCardNumberInput />
-                            <div className="sq-form-third">
-                                <CreditCardExpirationDateInput />
-                            </div>
+                        <div>
+                            <CreditCardPostalCodeInput />
+                        </div>
 
-                            <div className="sq-form-third">
-                                <CreditCardPostalCodeInput />
-                            </div>
+                        <div>
+                            <CreditCardCVVInput />
+                        </div>
+                    </fieldset>
 
-                            <div className="sq-form-third">
-                                <CreditCardCVVInput />
-                            </div>
-                        </fieldset>
-
-                        <CreditCardSubmitButton>
-                            Pay $1.00
+                    <CreditCardSubmitButton>
+                        Donate
                     </CreditCardSubmitButton>
                     </SquarePaymentForm>
 
-                    <div className="sq-error-message">
-                        {this.state.errorMessages.map(errorMessage =>
-                            <li key={`sq-error-${errorMessage}`}>{errorMessage}</li>
-                        )}
-                    </div>
-
+                <div className="sq-error-message">
+                    {this.state.errorMessages.map(errorMessage =>
+                        <li key={`sq-error-${errorMessage}`}>{errorMessage}</li>
+                    )}
                 </div>
+                    */}
             </div>
 
         )
     }
-} 
+}
+
+
